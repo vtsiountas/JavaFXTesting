@@ -24,7 +24,7 @@ public class Main extends Application {
         scene = new Scene(vBox, 300, 300);
         button = new Button("Go to 2nd Screen");
 
-        button.setOnAction(e -> StartScene.display(primaryStage));
+        button.setOnAction(e -> Scene2.display(primaryStage));
 
         spinnerValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50, 0);
         spinner = new Spinner<>(spinnerValueFactory);
