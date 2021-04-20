@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -23,13 +24,14 @@ public class Main extends Application {
         vBox.setAlignment(Pos.CENTER);
         scene = new Scene(vBox, 300, 300);
         button = new Button("Go to 2nd Screen");
+        vBox.setSpacing(15);
 
         button.setOnAction(e -> Scene2.display(primaryStage));
 
         spinnerValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 50, 0);
         spinner = new Spinner<>(spinnerValueFactory);
 
-        vBox.getChildren().addAll(button, spinner);
+        vBox.getChildren().addAll(spinner, button);
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("Screen 1");
