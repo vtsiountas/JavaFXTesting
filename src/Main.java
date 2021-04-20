@@ -22,8 +22,9 @@ public class Main extends Application {
         button = new Button("Go to 2nd Screen");
         vBox.setSpacing(15);
 
-        button.setOnAction(e -> Scene2.display(primaryStage));
+//        button.setOnAction(e -> Scene2.display(primaryStage));
 
+        button.setOnAction(e -> new Scene2(primaryStage));
         label = new Label("Click me to go to Scene 2");
 
         vBox.getChildren().addAll(label, button);
